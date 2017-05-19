@@ -5,19 +5,25 @@ from config import ACCOUNT_SID, AUTH_TOKEN, TWILIO_NUMBER
 def validates_choice(user_choice):
     """Returns bool of user's choice"""
 
-    pass
+    if user_choice.lower() == "yes":
+        return True
+    elif user_choice.lower() == "no":
+        return False
 
 
 def gets_to_number():
     """Ask user for phone number, returns it with +1 added"""
 
-    pass
+    phone_number = raw_input("What is the phone number? ")
+    complete_number = "+1" + str(phone_number)
+    return complete_number
 
 
 def gets_message_to_send():
     """Ask user for message to send"""
 
-    pass
+    user_message = raw_input("What message do you want to send? ")
+    return user_message
 
 
 def send_message(to_number, to_message, ACCOUNT_SID,
