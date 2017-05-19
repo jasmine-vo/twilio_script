@@ -5,9 +5,9 @@ from config import ACCOUNT_SID, AUTH_TOKEN, TWILIO_NUMBER
 def validates_choice(user_choice):
     """Returns bool of user's choice"""
 
-    if user_choice.lower() == "yes":
+    if user_choice.lower() == "yes" or user_choice.lower() == "y":
         return True
-    elif user_choice.lower() == "no":
+    elif user_choice.lower() == "no" or user_choice.lower() == "n" or user_choice.lower() == "nope":
         return False
 
 
